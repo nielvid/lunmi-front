@@ -6,6 +6,8 @@ import Home from "./components/Home";
 import Signup from "./components/Signup";
 import Mobilemenu from "./common/Mobilemenu";
 import Header from "./common/Header";
+import Banner from "./components/Banner";
+import Footer from "./common/Footer";
 
 function App() {
   const [state, setstate] = useState(window.innerWidth);
@@ -26,14 +28,16 @@ function App() {
         <PageWrapper>
           <Router>
             {state < 720 ? <Mobilemenu /> : <Header />};
+            <Banner />
             <Switch>
               <Route exact path="/">
                 <Home />
               </Route>
-              <Route exact path="/signup">
+              <Route exact path="/event">
                 <Signup />
               </Route>
             </Switch>
+            <Footer />
           </Router>
         </PageWrapper>
       </ChakraProvider>

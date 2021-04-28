@@ -11,7 +11,15 @@ export default function Mobilemenu() {
 
   return (
     <>
-      <Box background="#572CD8" color="white" w="100%" p="1em 2em">
+      <Box
+        background="#1b1143"
+        color="white"
+        w="100%"
+        p="1em 2em"
+        position="fixed"
+        top="0"
+        zIndex="3"
+      >
         <MenuIcon width="8%" onClick={Clicked} />
 
         <Box
@@ -31,26 +39,29 @@ export default function Mobilemenu() {
             <Link to="/">Home</Link>
           </List>
           <List>
-            <Link to="/signup" onClick={Clicked}>
+            <Link to="/" onClick={Clicked}>
               About
             </Link>
           </List>
           <List onClick={Clicked}>
-            <Link to="/">Products</Link>
+            <Link to="/">Sermon</Link>
           </List>
           <List onClick={Clicked}>
-            <Link to="/">Services</Link>
+            <Link to="/">Ministries</Link>
           </List>
           <List onClick={Clicked}>
-            <Link to="/">SME</Link>
+            <Link to="/event">Event</Link>
           </List>
           <List onClick={Clicked}>
-            <Link to="/">Loan</Link>
+            <Link to="/">Contact</Link>
           </List>
           <List onClick={Clicked}>
-            <Link to="/">Accounts</Link>
+            <Link to="/">Give</Link>
           </List>
         </Box>
+      </Box>
+      <Box mb="2.9em" position="relative" top="6em">
+        {" "}
       </Box>
     </>
   );

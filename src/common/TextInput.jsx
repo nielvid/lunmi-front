@@ -3,7 +3,14 @@ import { Input, InputLeftElement, InputGroup } from "@chakra-ui/react";
 // import { ReactComponent as Logo } from "../img/logo.svg";
 
 // eslint-disable-next-line react/prop-types
-export default function TextInput({ icon, register, name, type, placeholder }) {
+export default function TextInput({
+  icon,
+  name,
+  register,
+  onChange,
+  type,
+  placeholder,
+}) {
   return (
     <>
       <InputGroup
@@ -25,6 +32,7 @@ export default function TextInput({ icon, register, name, type, placeholder }) {
           {icon}
         </InputLeftElement>
         <Input
+          ref={register}
           py="1.5rem"
           px="2.5rem"
           ml="1.5em"
@@ -32,12 +40,12 @@ export default function TextInput({ icon, register, name, type, placeholder }) {
           type={type}
           color="black"
           alignItems="center"
-          ref={register}
           name={name}
           borderRightRadius="15px"
           border="none"
           outline="none"
           placeholder={placeholder}
+          onChange={onChange}
         />
       </InputGroup>
     </>

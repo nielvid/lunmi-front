@@ -15,7 +15,7 @@ export default function CommonBtn({
         background={background}
         color={color}
         fontSize={fontSize}
-        px="5em"
+        px="1em"
         padding={padding}
       >
         {children}
