@@ -4,12 +4,14 @@ import { Box, Flex, List, Image } from "@chakra-ui/react";
 // import { ReactComponent as Logo } from "../img/logo.svg";
 import LgLogo from "../img/lightlogo.png";
 import CommonBtn from "./CommonBtn";
+// import DropdownMenu from "../components/DropdownMenu";
 
 export default function Header() {
   const [state, setstate] = useState();
   const Clicked = () => {
     setstate(!state);
   };
+
   return (
     <>
       <Box
@@ -39,10 +41,10 @@ export default function Header() {
               <Link to="/">Ministries</Link>
             </List>
             <List pr="2rem" onClick={Clicked}>
-              <Link to="/event">Event</Link>
+              <Link to="/events">Events</Link>
             </List>
             <List pr="2rem" onClick={Clicked}>
-              <Link to="/">Contact</Link>
+              <Link to="/contact">Contact</Link>
             </List>
             <Box>
               {" "}

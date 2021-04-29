@@ -66,7 +66,7 @@ export default function Home() {
             <Text fontSize="2rem">...raising assets of global Impacts</Text>
           </Thrusts>
           <Thrusts>
-            <Flex justifyContent="center" mR="1em">
+            <Flex justifyContent="center" mx="1em">
               <Image
                 src={Mission}
                 borderRadius="80%"

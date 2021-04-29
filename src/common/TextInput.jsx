@@ -6,24 +6,23 @@ import { Input, InputLeftElement, InputGroup } from "@chakra-ui/react";
 export default function TextInput({
   icon,
   name,
-  register,
-  onChange,
-  type,
   placeholder,
+
+  onChange,
 }) {
   return (
     <>
       <InputGroup
         borderRightRadius="15px"
         background="white"
-        border="2px solid #572CD8"
+        border="2px solid #1b1143"
         m="3px 0"
       >
         <InputLeftElement
           py="1.5rem"
           px="2.5rem"
           fontSize="2rem"
-          background="#572CD8"
+          background="#1b1143"
           border="none"
           pointerEvents="none"
           alignItems="center"
@@ -32,18 +31,16 @@ export default function TextInput({
           {icon}
         </InputLeftElement>
         <Input
-          ref={register}
           py="1.5rem"
           px="2.5rem"
           ml="1.5em"
           fontSize="2rem"
-          type={type}
           color="black"
           alignItems="center"
-          name={name}
           borderRightRadius="15px"
           border="none"
           outline="none"
+          name={name}
           placeholder={placeholder}
           onChange={onChange}
         />

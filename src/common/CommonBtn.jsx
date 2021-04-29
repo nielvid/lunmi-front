@@ -7,6 +7,10 @@ export default function CommonBtn({
   color,
   background,
   padding,
+  type,
+  px,
+  py,
+  margin,
   children,
 }) {
   return (
@@ -15,8 +19,11 @@ export default function CommonBtn({
         background={background}
         color={color}
         fontSize={fontSize}
-        px="1em"
+        px={px}
+        py={py}
         padding={padding}
+        type={type}
+        margin={margin}
       >
         {children}
       </Button>

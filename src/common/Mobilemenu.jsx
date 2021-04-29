@@ -4,7 +4,7 @@ import { Box, List } from "@chakra-ui/react";
 import { ReactComponent as MenuIcon } from "./menu.svg";
 
 export default function Mobilemenu() {
-  const [state, setstate] = useState();
+  const [state, setstate] = useState(true);
   const Clicked = () => {
     setstate(!state);
   };
@@ -28,36 +28,67 @@ export default function Mobilemenu() {
           position="absolute"
           top="2.8em"
           left="0"
-          width="85px"
-          background="#572CD1"
-          height="70vh"
-          pl="1em"
+          width="105px"
+          background="#1b1143"
+          height="50vh"
           zIndex="3"
           opacity="0.9"
         >
-          <List onClick={Clicked}>
-            <Link to="/">Home</Link>
-          </List>
-          <List>
-            <Link to="/" onClick={Clicked}>
-              About
-            </Link>
-          </List>
-          <List onClick={Clicked}>
-            <Link to="/">Sermon</Link>
-          </List>
-          <List onClick={Clicked}>
-            <Link to="/">Ministries</Link>
-          </List>
-          <List onClick={Clicked}>
-            <Link to="/event">Event</Link>
-          </List>
-          <List onClick={Clicked}>
-            <Link to="/">Contact</Link>
-          </List>
-          <List onClick={Clicked}>
-            <Link to="/">Give</Link>
-          </List>
+          <Box pl="1em">
+            <List
+              onClick={Clicked}
+              py="0.7em"
+              px="0.7em"
+              _hover={{ background: "gray" }}
+            >
+              <Link to="/">Home</Link>
+            </List>
+            <List py="0.5em" px="0.7em" _hover={{ background: "gray" }}>
+              <Link to="/" onClick={Clicked}>
+                About
+              </Link>
+            </List>
+            <List
+              onClick={Clicked}
+              py="0.5em"
+              px="0.7em"
+              _hover={{ background: "gray" }}
+            >
+              <Link to="/">Sermon</Link>
+            </List>
+            <List
+              onClick={Clicked}
+              py="0.5em"
+              px="0.7em"
+              _hover={{ background: "gray" }}
+            >
+              <Link to="/">Ministries</Link>
+            </List>
+            <List
+              onClick={Clicked}
+              py="0.5em"
+              px="0.7em"
+              _hover={{ background: "gray" }}
+            >
+              <Link to="/events">Events</Link>
+            </List>
+            <List
+              onClick={Clicked}
+              py="0.5em"
+              px="0.7em"
+              _hover={{ background: "gray" }}
+            >
+              <Link to="/contact">Contact</Link>
+            </List>
+            <List
+              onClick={Clicked}
+              py="0.5em"
+              px="0.7em"
+              _hover={{ background: "gray" }}
+            >
+              <Link to="/">Give Online</Link>
+            </List>
+          </Box>
         </Box>
       </Box>
       <Box mb="2.9em" position="relative" top="6em">
